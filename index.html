@@ -8,12 +8,14 @@
 <body>
     <h1>Imadeddin Ouahidi</h1>
     <h2>My favorite food is: Lasagna</h2>
-    <p>I love Lasagna because it's <b>flavorful</b> and <b>cheezy</b>. It always reminds me of my <b>childhood memories</b>.</p>
+    <p>I love Lasagna because it's <b>flavorful</b> and <b>cheezy</b>. It always reminds me of my <b>childhood
+            memories</b>.</p>
 
     <hr>
 
     <h2>How to make a Lasagna</h2>
-    <p>Lasagna is a delicious Italian dish made of stacked layers of pasta, cheese, and sauce. Here's how to make it:</p>
+    <p>Lasagna is a delicious Italian dish made of stacked layers of pasta, cheese, and sauce. Here's how to make it:
+    </p>
     <ol>
         <li>Boil pasta</li>
         <li>Prepare the meat sauce:
@@ -46,7 +48,8 @@
     <hr>
 
     <h2>Alternative Actors for The Wolf of Wall Street</h2>
-    <p>While Leonardo DiCaprio gave an iconic performance in The Wolf of Wall Street, here are some other actors that I want to see play the main role besides Leonardo DiCaprio:</p>
+    <p>While Leonardo DiCaprio gave an iconic performance in The Wolf of Wall Street, here are some other actors that I
+        want to see play the main role besides Leonardo DiCaprio:</p>
 
     <table>
         <tr>
@@ -75,6 +78,44 @@
             <td>50</td>
         </tr>
     </table>
+
+    <hr>
+
+    <h2>Dart Code</h2>
+    <p>Here is a snippet of Dart code that creates a data class(based on 75 as the two last digits of my S number):</p>
+    <pre>
+        <code>
+            @immutable
+            class User {
+            final String name;
+            final int age;
+            
+            User(this.name, this.age);
+            
+            User copyWith({
+                String name,
+                int age,
+            }) {
+                return User(
+                name ?? this.name,
+                age ?? this.age,
+                );
+            }
+            
+            @override
+            bool operator ==(Object o) {
+                if (identical(this, o)) return true;
+            
+                return o is User && o.name == name && o.age == age;
+            }
+            
+            @override
+            int get hashCode => name.hashCode ^ age.hashCode;
+            }
+        </code>
+    </pre>
+
+    <a href="https://code.pieces.app/collections/dart">Link for the snippet source</a>
 
 </body>
 
